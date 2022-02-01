@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "Personal Discord Bot"
 authors = ["Vinicius Gonçalves de Oliveira <vinicius@myriaddev.me>"]
 
+[tool.poetry.scripts]
+dezbot = 'dezbot.__main__:main'
+
 [tool.poetry.dependencies]
 python = "^3.10"
 disnake = "^2.3.0"
@@ -11,6 +14,24 @@ disnake = "^2.3.0"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 pre-commit = "^2.17.0"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+target-version = ['py310']
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
