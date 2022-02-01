@@ -1,0 +1,3 @@
+# Dezbot
+
+Personal Discord Bot
