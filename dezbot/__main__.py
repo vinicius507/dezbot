@@ -2,6 +2,7 @@ import argparse
 
 from dezbot import __version__
 from dezbot.bot import Dezbot
+from dezbot.log import LOG as _
 
 
 def main():
