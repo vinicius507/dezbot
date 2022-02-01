@@ -3,6 +3,7 @@ import argparse
 from dezbot import __version__
 from dezbot.bot import Dezbot
 from dezbot.log import LOG as _
+from dezbot.cogs.commands import admin
 
 
 def main():
@@ -15,5 +16,7 @@ def main():
         version=__version__,
         command_prefix=args.prefix,
         description="Dezbot Discord Bot",
+        test_guilds=[787419759397568542],
     )
+    admin.setup(bot)
     bot.run()
